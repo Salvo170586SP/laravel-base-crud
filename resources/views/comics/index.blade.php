@@ -3,8 +3,10 @@
 @section('contain')
 
 <div class="container">
-    <h2>Qui la lista dei comics</h2>
-
+    <div class="title-comics d-flex justify-content-between align-item-center">
+        <h2>Qui la lista dei comics</h2>
+        <a class="btn btn-primary mb-5" href="{{ route('comics.create') }}">AGGIUNGI NUOVO COMIC</a>
+    </div>
     <ul>
         @foreach($comics as $comic)
         <li> <h2>{{ $comic->title }}</h2></li>
