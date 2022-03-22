@@ -49,14 +49,15 @@ class ComicController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  int  $id
+     * 
+     *  **posso passare la variabile $comic al posto dell'id**
+     * @param  Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
-        $comic = Comic::findOrFail($id);
+        //se passo come parametro l'id utilizzo la funzione sotto
+        //$comic = Comic::findOrFail($id); 
         //dd($comic);
         return view('comics.show', compact('comic'));
     }
