@@ -7,19 +7,24 @@
         <h2>Qui la lista dei comics</h2>
         <a class="btn btn-primary mb-5" href="{{ route('comics.create') }}">AGGIUNGI NUOVO COMIC</a>
     </div>
-    <ul>
+    <div class="row g-3">
         @foreach($comics as $comic)
-        <li> <h2>{{ $comic->title }}</h2></li>
-        <li><p>{{ $comic->description }}</p></li>
-        <li><img src="{{ $comic->thumb }}" alt="$comic->title"> </li>
-        <li><p>{{ $comic->series }}</p></li>
-        <li><span>{{ $comic->price }}</span></li>
-        <li><span>{{ $comic->sale_date }}</span></li>
-        <li><p>{{ $comic->type }}</p></li>
-        <li><a href="{{ route('comics.show', $comic->id ) }}">visualizza dettagli comic</a></li>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{$comic->title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{$comic->title}}</h5>
+                    <p class="card-text">{{ $comic->series}}</p>
+                    <p class="card-text">{{ $comic->price}}</p>
+                    <p class="card-text">{{ $comic->sale_date}}</p>
+                    <p class="card-text">{{ $comic->type}}</p>
+                    <a href="{{ route('comics.show', $comic->id ) }}" class="btn btn-primary">Visualizza dettagli</a>
+                </div>
+            </div>
+        </div>
+            @endforeach
 
-        @endforeach
-    </ul>
+    </div>
 
 </div>
 
