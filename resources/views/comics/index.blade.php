@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="title-comics d-flex justify-content-between align-item-center">
-        <h2>Qui la lista dei comics</h2>
+        <h2>Comics</h2>
         <a class="btn btn-primary mb-5" href="{{ route('comics.create') }}">AGGIUNGI NUOVO COMIC</a>
     </div>
     <div class="row g-3">
