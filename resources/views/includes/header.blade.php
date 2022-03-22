@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
-        <a class="nav-link" href="{{ route('comics.index') }}">Vai ai comics</a>
+        <a class="nav-link @if (Route::currentRouteName() === 'comics.index') active @endif" href="{{ route('comics.index') }}">Vai ai comics</a>
       </div>
     </div>
   </div>
