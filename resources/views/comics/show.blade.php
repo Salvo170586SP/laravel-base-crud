@@ -3,10 +3,9 @@
 @section('contain')
 
 <div class="container">
-    <h2>Qui la lista dei comics</h2>
+    <h2>Dettagli</h2>
 
     <ul>
-        @foreach($comics as $comic)
         <li> <h2>{{ $comic->title }}</h2></li>
         <li><p>{{ $comic->description }}</p></li>
         <li><img src="{{ $comic->thumb }}" alt="$comic->title"> </li>
@@ -14,9 +13,6 @@
         <li><span>{{ $comic->price }}</span></li>
         <li><span>{{ $comic->sale_date }}</span></li>
         <li><p>{{ $comic->type }}</p></li>
-        <li><a href="{{ route('comics.show', $comic->id ) }}">visualizza dettagli comic</a></li>
-
-        @endforeach
     </ul>
 
 </div>
