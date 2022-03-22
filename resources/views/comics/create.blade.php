@@ -7,7 +7,8 @@
     <h2>Aggiungi dati del tuo comic</h2>
     <div class="form-comic my-5">
 
-        <form action="">
+        <form action="{{ route('comics.store') }}" method="POST">
+            @csrf
 
             <label for="title">Titolo</label>
             <div class="input-group mb-3">
