@@ -13,6 +13,7 @@
         <li><span>{{ $comic->price }}</span></li>
         <li><span>{{ $comic->sale_date }}</span></li>
         <li><p>{{ $comic->type }}</p></li>
+        
     </ul>
 
 </div>
