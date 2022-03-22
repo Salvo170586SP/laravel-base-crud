@@ -3,8 +3,6 @@
 @section('contain')
 
 <div class="container">
-    <h2>Dettagli</h2>
-
     <div class="row g-3">
         <div class="col-12">
             <div class="bg-white d-flex shadow">
