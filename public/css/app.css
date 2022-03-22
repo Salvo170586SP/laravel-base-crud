@@ -11243,3 +11243,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: slategray;
+}
+body .border-radius {
+  border-radius: 10px;
+}

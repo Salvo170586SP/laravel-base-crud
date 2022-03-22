@@ -2,9 +2,11 @@
 
 @section('contain')
 
-<div class="container">
+<div class="container text-white">
 
-    <h2>Aggiungi dati del tuo comic</h2>
+<div class="text-center">
+    <h2>Aggiungi il tuo comic</h2>
+</div>
     <div class="form-comic my-5">
 
         <form action="{{ route('comics.store') }}" method="POST">
