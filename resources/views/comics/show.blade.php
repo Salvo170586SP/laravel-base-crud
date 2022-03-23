@@ -8,11 +8,15 @@
             <div class="bg-white d-flex shadow">
                 <img src="{{ $comic->thumb }}" class="img-fluids" width="300" alt="{{$comic->title}}">
                 <div class="card-body w-75">
-                    <form action="{{ route('comics.destroy', $comic->id)}}" class="delete-form text-end" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
-                    </form>
+                    <div class=" d-flex justify-content-end">
+                        <a href="{{ route('comics.edit', $comic->id ) }}" class="btn btn-secondary me-3"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <form action="{{ route('comics.destroy', $comic->id)}}" class="delete-form" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    </div>
+
                     <h2 class="card-title">{{$comic->title}}</h2>
                     <p class="card-text">{{ $comic->series}}</p>
                     <p class="card-text"><span class="fw-bold">Prezzo:</span> {{ $comic->price}}</p>
