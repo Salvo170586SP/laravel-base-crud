@@ -4,12 +4,16 @@
 
 <div class="container text-white">
 
-<div class="text-center">
-    <h2>Modifica il tuo comic</h2>
-</div>
-<a href="{{ route('comics.index') }}" class="btn btn-primary text-end">Torna alla lista</a>
+    <div class="text-center">
+        <h2>Modifica il tuo comic</h2>
+    </div>
+    <div class="d-flex justify-content-between">
+        <a href="{{ route('comics.show', $comic->id)}}" class="btn btn-primary">Torna al comic</a>
+        <a href="{{ route('comics.index') }}" class="btn btn-primary text-end">Torna alla lista</a>
+    </div>
+
     <div class="form-comic my-5">
-        
+
         <!-- alert validatore -->
         @if($errors->any())
         <div class="alert alert-danger bg-danger text-white">
@@ -27,7 +31,7 @@
 
             <label for="title">Titolo</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control"  id="title" name="title" value="{{ $comic->title }}">
+                <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}">
             </div>
 
             <label for="description">Descrizione</label>
