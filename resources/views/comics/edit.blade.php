@@ -7,6 +7,7 @@
 <div class="text-center">
     <h2>Modifica il tuo comic</h2>
 </div>
+<a href="{{ route('comics.index') }}" class="btn btn-primary text-end">Torna alla lista</a>
     <div class="form-comic my-5">
 
         <form action="{{ route('comics.store') }}" method="POST">
@@ -46,7 +47,9 @@
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name="type" value="{{ $comic->type }}">
             </div>
-            <button type="submit" class="btn btn-primary">Aggiungi</button>
+            <div class="text-end">
+                <button type="submit" class="btn btn-lg btn-secondary">Aggiorna modifiche</button>
+            </div>
         </form>
     </div>
 
