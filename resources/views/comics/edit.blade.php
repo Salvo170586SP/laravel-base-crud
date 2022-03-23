@@ -10,8 +10,9 @@
 <a href="{{ route('comics.index') }}" class="btn btn-primary text-end">Torna alla lista</a>
     <div class="form-comic my-5">
 
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
+            @method('PUT')
 
             <label for="title">Titolo</label>
             <div class="input-group mb-3">
