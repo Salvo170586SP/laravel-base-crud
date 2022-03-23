@@ -2,6 +2,8 @@
 
 @section('contain')
 
+
+
 <div class="container">
     <div class="row g-3">
         <div class="col-12">
@@ -31,4 +33,21 @@
 
 </div>
 
+@endsection
+
+
+<!-- script per conferma eliminazione comic -->
+@section('other-script')
+<script>
+    const deleteForm = document.querySelectorAll('.delete-form');
+    deleteForm.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const accept = confirm(`Vuoi eliminare questo comic?`);
+            if (accept) {
+                e.target.submit();
+            }
+        })
+    })
+</script>
 @endsection
