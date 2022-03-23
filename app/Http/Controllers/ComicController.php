@@ -41,13 +41,13 @@ class ComicController extends Controller
 
          //validazione a insrimento dati da gui
          $request->validate([
-            'title' => ' required|string|min:5|max:100',
-            'description' => ' required|string|min:1',
-            'thumb' => ' required',
-            'series' => ' required|string|min:5|max:50',
-            'price' => ' required|numeric',
-            'sale_date' => ' required',
-            'type' => ' required|string|min:5|max:50',
+            'title' => 'required|string|max:100',
+            'description' => 'required|string|min:1',
+            'thumb' => 'required',
+            'series' => 'required|string|max:50',
+            'price' => 'required|numeric',
+            'sale_date' => 'required',
+            'type' => 'required|string|max:50',
         ]);
 
         $data = $request->all();
