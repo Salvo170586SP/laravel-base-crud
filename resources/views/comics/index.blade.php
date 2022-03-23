@@ -19,7 +19,7 @@
                     <p class="card-text">{{ $comic->sale_date}}</p>
                     <p class="card-text">{{ $comic->type}}</p>
                     <a href="{{ route('comics.show', $comic->id ) }}" class="btn btn-primary">Visualizza dettagli</a>
-                    <a href="{{ route('comics.edit', $comic->id ) }}" class="btn btn-secondary">Modifica</a>
+                    <a href="{{ route('comics.edit', $comic->id ) }}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
             </div>
         </div>
