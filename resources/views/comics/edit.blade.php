@@ -9,6 +9,17 @@
 </div>
 <a href="{{ route('comics.index') }}" class="btn btn-primary text-end">Torna alla lista</a>
     <div class="form-comic my-5">
+        
+        <!-- alert validatore -->
+        @if($errors->any())
+        <div class="alert alert-danger bg-danger text-white">
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
         <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
