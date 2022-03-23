@@ -18,12 +18,19 @@
                     <p class="card-text">{{ $comic->price}}</p>
                     <p class="card-text">{{ $comic->sale_date}}</p>
                     <p class="card-text">{{ $comic->type}}</p>
-                    <a href="{{ route('comics.show', $comic->id ) }}" class="btn btn-primary">Visualizza dettagli</a>
-                    <a href="{{ route('comics.edit', $comic->id ) }}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ route('comics.show', $comic->id ) }}" class="btn btn-primary">Visualizza dettagli</a>
+                        <a href="{{ route('comics.edit', $comic->id ) }}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <form action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-            @endforeach
+        @endforeach
 
     </div>
 
