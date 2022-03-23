@@ -15,5 +15,7 @@
     <main class="m-5">
         @yield('contain')
     </main>
+    <script src="{{ asset('js/app.js') }}"></script>
+    @yield('other-script')
 </body>
 </html>
