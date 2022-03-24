@@ -18,8 +18,9 @@
 
     <div class="row align-items-end g-3">
         @foreach($comics as $comic)
-        <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card" style="width: 18rem;">
+
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+            <div id="card-index" class="card" style="width: 18rem;">
                 <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{$comic->title}}">
                 <div class="card-body">
                     <h5>{{$comic->title}}</h5>
@@ -38,6 +39,9 @@
                 </div>
             </div>
         </div>
+
+
+
         @endforeach
 
     </div>

@@ -11253,3 +11253,23 @@ body .card-show {
   border-radius: 20px;
   overflow: hidden;
 }
+
+#card-index {
+  position: relative;
+  cursor: pointer;
+}
+#card-index .card-body {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.829);
+}
+#card-index:hover .card-body {
+  display: flex;
+}
