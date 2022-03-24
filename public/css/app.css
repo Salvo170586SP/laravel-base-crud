@@ -11244,8 +11244,12 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: slategray;
+  background-color: darkslategray;
 }
 body .border-radius {
   border-radius: 10px;
+}
+body .card-show {
+  border-radius: 20px;
+  overflow: hidden;
 }

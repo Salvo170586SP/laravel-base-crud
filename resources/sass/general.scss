@@ -1,8 +1,15 @@
 body{
-    background-color: slategray;
+    background-color: darkslategray;
 
     .border-radius{
         border-radius: 10px;
     }
+
+    .card-show{
+        border-radius: 20px;
+        overflow: hidden;
+       
+    }
+
 }
 
